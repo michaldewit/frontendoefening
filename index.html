@@ -13,10 +13,10 @@
                 if(this.readyState == 4){
                     console.log(this.responseText)
                     var mijnobj = JSON.parse(this.responseText);
-                    document.getElementById("mijnoutput").innerHTML = mijnobj.naam;
+                    document.getElementById("mijnoutput").innerHTML = mijnobj.naam  +" "+mijnobj.beroep;
                 }
             }
-            var2.open("GET", "http://localhost:8082/zozo/", true);
+            var2.open("GET", "https://michalrolf.azurewebsites.net/zozo", true);
             var2.send();
         }
     </script>
